@@ -1,0 +1,215 @@
+/*
+ * Tehran tax guide — typography system, revision 4
+ * Edit the tokens here to revise the whole site's type hierarchy.
+ * Loaded after styles.css intentionally: typography is a single source of truth.
+ */
+:root {
+  --font-ui: "Vazirmatn", Tahoma, Arial, sans-serif;
+  --type-body: 1.0625rem;      /* 17 px at default browser settings */
+  --type-body-sm: 1rem;        /* 16 px */
+  --type-control: 1rem;
+  --type-meta: .875rem;        /* 14 px: never microtype for meaningful copy */
+  --type-heading-hero: clamp(2.55rem, 3.8vw, 3.45rem);
+  --type-heading-section: clamp(1.85rem, 2.6vw, 2.25rem);
+  --type-heading-card: 1.25rem;
+  --type-heading-sub: 1.5rem;
+  --leading-body: 1.9;
+  --leading-heading: 1.48;
+}
+html {font-size:100%;text-size-adjust:100%;-webkit-text-size-adjust:100%}
+body,button,input,textarea,select {font-family:var(--font-ui)}
+body {font-size:var(--type-body);line-height:var(--leading-body)}
+/* Persian/Arabic joining should not be tracked or condensed. */
+h1,h2,h3,h4,.hero h1,.section-head h2,.spotlight-main h2,.faq-aside h2,.wizard-intro h2,
+.detail-top h1,.eyebrow,.section-kicker,.panel-heading {letter-spacing:normal;word-spacing:normal}
+h1,h2,h3,h4 {line-height:var(--leading-heading);font-weight:700;text-wrap:pretty}
+p,li,summary,label {letter-spacing:normal}
+:is(.hero-description,.section-head p,.journey-card p,.service-card p,.spotlight-main p,
+.wizard-intro p,.glossary-grid p,.faq-aside p,.faq-list details p,.contact-light>p,
+.detail-top p,.step-body p,.side-box p,.notice p) {overflow-wrap:break-word}
+input::placeholder {font-family:var(--font-ui);font-weight:400}
+
+/* Identity, navigation and primary controls */
+.topline {font-size:var(--type-meta);line-height:1.7}
+.topline-inner {min-height:39px}
+.brand-words {line-height:1.65}
+.brand-words strong {font-size:1.125rem;font-weight:800;line-height:1.55}
+.brand-words small {font-size:var(--type-meta);font-weight:400;line-height:1.6}
+.desktop-nav a {font-size:.9375rem;font-weight:600;line-height:1.65}
+.header-portal {font-size:.9375rem;font-weight:700;line-height:1.6}
+.mobile-nav a {font-size:1rem;line-height:1.7}
+
+/* Hero: confident but not overpowering, much closer to supporting copy. */
+.eyebrow {font-size:var(--type-meta);font-weight:600;line-height:1.6}
+.hero h1 {font-size:var(--type-heading-hero);font-weight:800;line-height:1.43;letter-spacing:normal;margin:22px 0 17px}
+.hero-lead {font-size:1.25rem;font-weight:700;line-height:1.7;margin-bottom:12px}
+.hero-description {font-size:1.0625rem;line-height:1.95;max-width:38rem;color:#e0edf2}
+.hero-search input,.hero-search button {font-size:var(--type-control);line-height:1.6}
+.hero-search button {font-weight:700}
+.hero-hints,.hero-hints span,.hero-hints button {font-size:var(--type-meta);line-height:1.65}
+.hero-facts b {font-size:1.5rem;font-weight:800;line-height:1.4}
+.hero-facts span {font-size:var(--type-meta);line-height:1.5;color:#d3e5ec}
+.hero-footer,.hero-footer>a,.hero-footer>span {font-size:var(--type-meta);line-height:1.7}
+.panel-heading,.panel-clock {font-size:var(--type-meta);font-weight:600;line-height:1.6}
+.hero-panel h2 {font-size:1.625rem;font-weight:800;line-height:1.5}
+.hero-panel p {font-size:var(--type-body-sm);line-height:1.85}
+.hero-quick button {line-height:1.65}
+.hero-quick button>span:nth-child(2) {font-size:1rem;font-weight:700;line-height:1.65}
+.hero-quick button small {font-size:var(--type-meta);font-weight:400;line-height:1.7}
+.quick-number {font-size:var(--type-meta);font-weight:700}
+.panel-bottom {font-size:.9375rem;line-height:1.75;font-weight:700}
+.panel-footer {font-size:var(--type-meta);line-height:1.8}
+
+/* Consistent scale across all eight service pages and landing sections. */
+.section-kicker,.side-label {font-size:var(--type-meta);font-weight:700;line-height:1.7}
+.section-head h2,.faq-aside h2,.wizard-intro h2,.contact-dark h2 {
+  font-size:var(--type-heading-section);font-weight:800;line-height:1.52;letter-spacing:normal;
+}
+.section-head p,.faq-aside p,.wizard-intro p {font-size:var(--type-body-sm);line-height:1.9}
+.section-count {font-size:var(--type-meta);line-height:1.6}
+.notice p,.notice a {font-size:.9375rem;line-height:1.9}
+.journey-number,.card-number,.glossary-grid article>span {font-size:var(--type-meta);letter-spacing:normal}
+.journey-card h3 {font-size:var(--type-heading-card);font-weight:700;line-height:1.5}
+.journey-card p {font-size:var(--type-body-sm);line-height:1.85}
+.filter-btn,.list-search input,.card-link {font-size:.9375rem;line-height:1.6}
+.service-card h3 {font-size:var(--type-heading-card);font-weight:700;line-height:1.55}
+.service-card p {font-size:var(--type-body-sm);line-height:1.85}
+.card-tag {font-size:var(--type-meta);font-weight:600;line-height:1.6;min-height:30px}
+.card-link {font-weight:700}
+.spotlight-main h2 {font-size:var(--type-heading-section);font-weight:800;line-height:1.55;letter-spacing:normal}
+.spotlight-main p,.example-flow p {font-size:var(--type-body-sm);line-height:1.85}
+.spotlight-primary,.spotlight-secondary {font-size:.9375rem;line-height:1.6;font-weight:700}
+.example-flow span {font-size:var(--type-meta)}
+.wizard-intro h2 {font-size:var(--type-heading-section)}
+.wizard-note {font-size:.9375rem;line-height:1.85}
+.wizard-step {font-size:var(--type-meta)}
+.wizard-card h3 {font-size:var(--type-heading-sub);font-weight:700;line-height:1.5}
+.wizard-options button {font-size:var(--type-body-sm);font-weight:600;line-height:1.7;min-height:57px}
+.wizard-result h4 {font-size:var(--type-heading-card);font-weight:700}
+.result-actions button {font-size:.9375rem;line-height:1.6}
+.glossary-grid h3 {font-size:1.125rem;font-weight:700;line-height:1.55}
+.glossary-grid p {font-size:var(--type-body-sm);line-height:1.85}
+.faq-aside h2 {font-size:var(--type-heading-section);line-height:1.5}
+.faq-mini strong {font-size:1rem;font-weight:700;line-height:1.7}
+.faq-mini span,.faq-mini a {font-size:.9375rem;line-height:1.8}
+#faq-search {font-size:var(--type-control);line-height:1.65}
+.faq-list summary {font-size:1.0625rem;font-weight:700;line-height:1.8;padding-block:18px}
+.faq-list details p {font-size:var(--type-body-sm);line-height:1.95}
+.contact-dark h2 {font-size:var(--type-heading-section)}
+.contact-dark p,.contact-light>p {font-size:var(--type-body-sm);line-height:1.9}
+.contact-link {font-size:.9375rem;line-height:1.6}
+.contact-demo-flag {font-size:var(--type-meta)}
+.contact-light h3 {font-size:var(--type-heading-sub);font-weight:700;line-height:1.5}
+.contact-pending strong {font-size:1rem;font-weight:700;line-height:1.7}
+.contact-pending small {font-size:.9375rem;line-height:1.8}
+.footer strong {font-size:1rem;line-height:1.7}
+.footer p,.footer-links a,.footer-bottom {font-size:var(--type-meta);line-height:1.85}
+
+/* Service details: the page people actually read carefully on a mobile screen. */
+.breadcrumb,.progress-label,.progress-help,.side-label {font-size:var(--type-meta);line-height:1.7}
+.detail-top h1 {font-size:var(--type-heading-section);font-weight:800;line-height:1.5}
+.detail-top p {font-size:var(--type-body);line-height:1.9}
+.detail-content-block h2 {font-size:var(--type-heading-sub);font-weight:800;line-height:1.5}
+.detail-warning {font-size:var(--type-body-sm);line-height:1.95}
+.detail-warning strong {font-weight:800}
+.step-body label {font-size:1.0625rem;font-weight:700;line-height:1.7}
+.step-body p,.docs-list li {font-size:var(--type-body-sm);line-height:1.9}
+.side-box h3 {font-size:1.25rem;font-weight:700;line-height:1.55}
+.side-box p {font-size:var(--type-body-sm);line-height:1.85}
+.side-box small {font-size:var(--type-meta);line-height:1.7}
+.side-button,.back-services,.button-secondary {font-size:.9375rem;line-height:1.65}
+.progress-help,.muted {font-size:var(--type-meta);line-height:1.85}
+.mobile-dock a {font-size:.8125rem;font-weight:600;line-height:1.5}
+
+/* Give longer real-world Persian service titles a natural, readable line break. */
+.service-card h3,.journey-card h3,.glossary-grid h3,.detail-top h1,.hero-panel h2 {
+  overflow-wrap:break-word;hyphens:none;
+}
+
+@media (max-width:1100px) {
+  .desktop-nav {display:none}
+  .menu-toggle {display:inline-flex}
+  .mobile-nav {display:block}
+  .header-portal {margin-right:auto}
+}
+@media (max-width:760px) {
+  :root {
+    --type-body:1rem;
+    --type-body-sm:1rem;
+    --type-control:1rem;
+    --type-heading-hero:clamp(2.05rem, 7.4vw, 2.625rem);
+    --type-heading-section:1.75rem;
+    --type-heading-card:1.1875rem;
+    --type-heading-sub:1.375rem;
+  }
+  body {font-size:var(--type-body);line-height:1.9}
+  .topline {font-size:.8125rem}
+  .brand-words strong {font-size:1rem;line-height:1.45}
+  .brand-words small {font-size:.8125rem;line-height:1.6}
+  .hero h1 {font-size:var(--type-heading-hero);line-height:1.45}
+  .hero-lead {font-size:1.125rem}
+  .hero-description {font-size:var(--type-body);line-height:1.95}
+  .eyebrow {font-size:.8125rem}
+  .hero-facts b {font-size:1.375rem}
+  .hero-facts span {font-size:.8125rem}
+  .hero-footer,.hero-footer>a,.hero-footer>span {font-size:.8125rem}
+  .journey-card h3 {font-size:1.125rem}
+  .journey-card p {font-size:var(--type-body-sm);line-height:1.8}
+  .service-card h3 {font-size:var(--type-heading-card)}
+  .service-card p {font-size:var(--type-body-sm)}
+  .mobile-dock a {font-size:.8125rem;line-height:1.5}
+  .faq-list summary {font-size:1rem}
+  .glossary-grid p {font-size:var(--type-body-sm)}
+}
+@media (max-width:560px) {
+  .hero h1 {font-size:var(--type-heading-hero);line-height:1.48}
+  .hero-panel h2 {font-size:1.5rem}
+  .hero-panel p {font-size:var(--type-body-sm)}
+  .hero-quick button>span:nth-child(2) {font-size:1rem}
+  .hero-quick button small {font-size:var(--type-meta)}
+  .hero-hints span,.hero-hints button {font-size:var(--type-meta)}
+  .hero-search input,.hero-search button {font-size:var(--type-control)}
+  .panel-clock {font-size:.8125rem}
+  .notice p,.notice a {font-size:.875rem;line-height:1.85}
+  .section-head h2,.faq-aside h2,.wizard-intro h2 {font-size:var(--type-heading-section)}
+  .section-head p {font-size:var(--type-body-sm)}
+  .filter-btn {font-size:.875rem;min-height:42px;padding-inline:11px}
+  .list-search input {font-size:var(--type-control)}
+  .service-card h3 {font-size:var(--type-heading-card)}
+  .service-card p {font-size:var(--type-body-sm)}
+  .spotlight-main h2 {font-size:var(--type-heading-section)}
+  .spotlight-main p,.example-flow p {font-size:var(--type-body-sm)}
+  .wizard-card h3 {font-size:var(--type-heading-sub)}
+  .wizard-options button {font-size:var(--type-body-sm);line-height:1.8}
+  .glossary-grid h3 {font-size:1.125rem}
+  .glossary-grid p {font-size:var(--type-body-sm)}
+  .faq-list summary {font-size:1rem}
+  .faq-list details p {font-size:var(--type-body-sm)}
+  .faq-content #faq-search {font-size:var(--type-control)}
+  .contact-dark h2 {font-size:var(--type-heading-section)}
+  .contact-light h3 {font-size:var(--type-heading-sub)}
+  .detail-top h1 {font-size:var(--type-heading-section)}
+  .step-body label {font-size:1rem}
+  .step-body p,.docs-list li,.side-box p {font-size:var(--type-body-sm)}
+}
+@media (max-width:380px) {
+  :root {--type-heading-hero:2rem;--type-heading-section:1.6rem}
+  .brand-words strong {font-size:.9375rem}
+  .brand-words small {font-size:.75rem}
+  .hero-facts span {font-size:.8125rem}
+}
+@media print {
+  body {font-size:11pt;line-height:1.5}
+  h1,h2,h3 {line-height:1.4}
+  .detail-top h1 {font-size:20pt}
+  .detail-content-block h2 {font-size:15pt}
+  .detail-warning,.step-body p,.docs-list li {font-size:11pt;line-height:1.5}
+}
+/* Long definitions should not be squeezed into two narrow mobile columns. */
+@media (max-width:560px) {
+  .glossary-grid {grid-template-columns:1fr}
+  .section-head p,.wizard-intro p,.faq-aside p {max-width:42rem}
+}
+@media (max-width:380px) {
+  .brand-words small {display:none}
+}
